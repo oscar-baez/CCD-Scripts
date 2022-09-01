@@ -8,6 +8,7 @@ import concurrent.futures
 
 #Funcion a paralelizar demux
 def demux(nombre):
+    print("Comienza a demultiplexar")
     hdulist = fits.open(nombre)
     tamx=int(hdulist[4].header['NAXIS1'])
     tamy=int(hdulist[4].header['NAXIS2'])
